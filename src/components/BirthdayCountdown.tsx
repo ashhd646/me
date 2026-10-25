@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import {
   Gift,
   Heart,
@@ -371,7 +372,7 @@ export const BirthdayCountdown: React.FC<BirthdayCountdownProps> = ({
       {/* =========================================================================
           BIRTHDAY MODAL: COUNTDOWN STATUS (LOCKED) OR REVEALED MESSAGE (AFTER END)
           ========================================================================= */}
-      {isOpen && (
+      {isOpen && typeof document !== 'undefined' && createPortal(
         <div
           role="dialog"
           aria-modal="true"
@@ -568,7 +569,8 @@ export const BirthdayCountdown: React.FC<BirthdayCountdownProps> = ({
               </div>
             )}
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );

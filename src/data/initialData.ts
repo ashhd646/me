@@ -1,11 +1,19 @@
 import { ProfileData, Memory, LoveReason, BirthdayData } from '../types';
 
+// Static asset imports so Vite properly bundles and hashes them for live production deployment
+import avatar4 from '../assets/images/4.jpeg';
+import avatar3 from '../assets/images/3.jpeg';
+import memoryZoo from '../assets/images/2.jpeg';
+import memorySunset from '../assets/images/memory_sunset_walk_1792234687582.jpg';
+import gfPortrait from '../assets/images/gf_portrait_1792234656322.jpg';
+import memoryCoffee from '../assets/images/memory_coffee_date_1792234671759.jpg';
+
 export const DEFAULT_PROFILE: ProfileData = {
   name: "Mansii",
   nickname: "Meri Babe ❤️",
   tagline: "The one who turned my ordinary world into pure magic 🌸",
-  avatarUrl: "/src/assets/images/4.jpeg",
-  secondaryAvatarUrl: "/src/assets/images/3.jpeg",
+  avatarUrl: avatar4,
+  secondaryAvatarUrl: avatar3,
   anniversaryDate: "2026-05-27",
   loveLetter: `Meri babe 😘,  
 
@@ -41,7 +49,7 @@ export const DEFAULT_MEMORIES: Memory[] = [
     id: "mem-1",
     title: "Hamara Ghumna",
     date: "",
-    imageUrl: "/src/assets/images/2.jpeg",
+    imageUrl: memoryZoo,
     description: "Meri Bandariya 🙈",
     location: "Zoo..",
     tag: "First Meet",
@@ -51,7 +59,7 @@ export const DEFAULT_MEMORIES: Memory[] = [
     id: "mem-2",
     title: "Sunset Walk & Holding Hands",
     date: "2024-05-18",
-    imageUrl: "/src/assets/images/memory_sunset_walk_1792234687582.jpg",
+    imageUrl: memorySunset,
     description: "Samundar ki thandi hawayein, dhalte sooraj ki laal-peeli dhoop aur tumhara haath mere haath mein. Us shaam lag raha tha jaise waqt ko yahin rok dein.",
     location: "Sunset Promenade Beach",
     tag: "Special Evening",
@@ -63,17 +71,17 @@ export const PRESET_IMAGES = [
   {
     id: "img-portrait",
     title: "Sweet Portrait",
-    url: "/src/assets/images/gf_portrait_1792234656322.jpg"
+    url: gfPortrait
   },
   {
     id: "img-coffee",
     title: "Cafe Date",
-    url: "/src/assets/images/memory_coffee_date_1792234671759.jpg"
+    url: memoryCoffee
   },
   {
     id: "img-sunset",
     title: "Sunset Walk",
-    url: "/src/assets/images/memory_sunset_walk_1792234687582.jpg"
+    url: memorySunset
   }
 ];
 

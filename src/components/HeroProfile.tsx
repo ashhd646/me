@@ -98,7 +98,7 @@ export const HeroProfile: React.FC<HeroProfileProps> = ({ profile }) => {
         <div className="relative inline-flex items-center justify-center select-none">
           {/* Clickable Circle Image Wrapper with Romantic Glow & 3D Perspective */}
           <div
-            className="relative group cursor-pointer select-none"
+            className="relative z-10 group cursor-pointer select-none"
             onClick={handleTogglePhoto}
             title="Surprise photo dekhne ke liye tap karein ✨"
             style={{ perspective: '1000px' }}
@@ -178,9 +178,9 @@ export const HeroProfile: React.FC<HeroProfileProps> = ({ profile }) => {
             </div>
           </div>
 
-          {/* Birthday Countdown Hanger - Pinned right at the circle's right-side corner */}
+          {/* Birthday Countdown Hanger - Placed behind circle photo on mobile (z-0), beside photo on desktop (md:z-20) */}
           <div
-            className="absolute -top-3 -right-3 sm:-right-4 md:left-[102%] md:right-auto md:top-2 z-30 pointer-events-auto"
+            className="absolute -top-3 -right-3 sm:-right-4 md:left-[102%] md:right-auto md:top-2 z-0 md:z-20 pointer-events-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <BirthdayCountdown birthdayData={DEFAULT_BIRTHDAY} variant="hanger" />
